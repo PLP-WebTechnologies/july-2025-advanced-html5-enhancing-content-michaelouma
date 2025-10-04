@@ -1,0 +1,112 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header - Flexbox */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004466;
+  color: white;
+  padding: 1rem;
+}
+
+header .nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+header .nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero */
+.hero {
+  background: #e0f7fa;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* Main Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.grid-layout article,
+.grid-layout aside {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Cards - Flexbox */
+.cards {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #cce7ff;
+  padding: 2rem;
+  flex: 1 1 200px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
